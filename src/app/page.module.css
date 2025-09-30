@@ -1,11 +1,21 @@
 .page {
+  /* Cores base */
   --gray-rgb: 0, 0, 0;
+  --gray-alpha-900: rgba(var(--gray-rgb), 0.9);
+  --gray-alpha-700: rgba(var(--gray-rgb), 0.5); 
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
+  /* Cores Primárias */
+  --color-primary: #007bff; /* Azul vibrante para botões e links */
+  --color-primary-text: #ffffff;
+  --color-primary-hover: #0056b3;
 
+  /* Cores Secundárias (para contraste ou botões secundários) */
+  --color-secondary: #f0f0f0; 
+  --color-secondary-text: #333;
+  --color-secondary-hover: #e0e0e0;
+  
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -14,27 +24,42 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  color: var(--gray-alpha-900); /* Define cor de texto principal */
 }
 
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
+    --gray-alpha-900: rgba(var(--gray-rgb), 0.9);
+    --gray-alpha-700: rgba(var(--gray-rgb), 0.5);
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    /* Cores Primárias Dark Mode */
+    --color-primary: #4da6ff; 
+    --color-primary-text: #1a1a1a; 
+    --color-primary-hover: #007bff;
+
+    /* Cores Secundárias Dark Mode */
+    --color-secondary: #1a1a1a;
+    --color-secondary-text: #f0f0f0;
+    --color-secondary-hover: #333;
   }
 }
 
-
+/* --- MAIN ---
+*/
 
 .main {
   display: flex;
-  
-  gap: 32px;
+  gap: 64px; 
   grid-row-start: 2;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%; 
+  max-width: 1200px; 
 }
 
 .header {
@@ -42,18 +67,193 @@
   flex-direction: row;
   align-items: center;
   gap: 46px;
+  max-width: 100%;
 }
 
+.headingLg {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Classe para o título "Nossos Serviços" */
+.headingLg2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+
 .teste {
-  
   border-radius: 50%;
   background: var(--gray-alpha-200);
   padding: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   width: auto;
   height: auto;
-  
+}
 
+/*
+--- BLOCO IFRAME (Miniatura do Site) ---
+*/
+.iframeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 900px;
+  width: 100%;
+  padding: 24px;
+  background: var(--gray-alpha-100);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(var(--gray-rgb), 0.1);
+}
+
+.iframeTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.iframeWrapper {
+    width: 90%;
+    height: 350px; /* Altura fixa para o mockup */
+    background: #fff; /* Fundo branco, simula tela */
+    border: 8px solid var(--gray-alpha-900); /* Borda grossa simula moldura */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--gray-alpha-700);
+}
+
+.iframeMockup {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(0.6); /* Reduz o conteúdo interno para simular uma miniatura */
+    transform-origin: 0 0; /* Começa a redução do canto superior esquerdo */
+    
+    /* Calculo de altura após o scale */
+    height: calc(100% / 0.6); 
+    width: calc(100% / 0.6);
+}
+
+
+
+
+/*
+--- SEÇÃO DE EXEMPLOS (NOVAS CLASSES) ---
+*/
+
+.serviceExample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 40px;
+  padding: 24px;
+  background: var(--gray-alpha-100);
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.serviceExample:nth-child(even) {
+  /* Inverte a ordem do conteúdo para um layout alternado (imagem à direita) */
+  flex-direction: row-reverse;
+}
+
+.serviceExample img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(var(--gray-rgb), 0.2);
+    object-fit: contain; 
+}
+
+
+/*
+--- CTAS GERAIS (Botões de Ação) ---
+*/
+
+.ctas {
+  /* Mantido para o caso de uso futuro, embora não esteja no .tsx atual */
+  display: flex;
+  gap: 146px;
+  margin-top: 36px;
+}
+
+.ctas2 { /* Container para o título Nossos Serviços */
+  margin-top: 10px;
+}
+
+
+.bodyMd {
+  font-size: 18px;
+  color: var(--gray-alpha-700);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+a.primary,
+a.secondary {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 8px;
+  min-width: 160px;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s;
+  box-shadow: 0 2px 4px rgba(var(--gray-rgb), 0.1);
+}
+
+a.primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+a.secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    border: 1px solid var(--gray-alpha-200);
+}
+
+
+/*
+--- GRID (Cards) ---
+*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+a.card {
+  padding: 24px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 10px;
+  transition: color 0.15s, border-color 0.15s, transform 0.3s;
+}
+
+a.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+a.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--gray-alpha-700);
 }
 
 
@@ -61,13 +261,21 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
-    background: var(--button-primary-hover);
+    background: var(--color-primary-hover);
     border-color: transparent;
   }
 
   a.secondary:hover {
-    background: var(--button-secondary-hover);
+    background: var(--color-secondary-hover);
     border-color: transparent;
+  }
+
+  a.card:hover,
+  a.card:focus,
+  a.card:active {
+    border-color: var(--color-primary);
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 10px rgba(var(--gray-rgb), 0.1);
   }
 
   .footer a:hover {
@@ -76,48 +284,91 @@
   }
 }
 
+/*
+--- MEDIA QUERIES (RESPONSIVIDADE) ---
+*/
+
+@media (max-width: 900px) {
+  .serviceExample {
+    flex-direction: column !important; 
+    text-align: center;
+  }
+  .serviceExample img {
+    max-width: 80%; 
+    height: auto;
+  }
+}
+
+
 @media (max-width: 600px) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
+    gap: 32px;
   }
 
   .main {
     align-items: center;
+    gap: 32px;
   }
 
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
+  .header {
     flex-direction: column;
+    text-align: center;
+    gap: 16px;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .headingLg {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .headingLg2 {
+      font-size: 24px;
   }
 
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
+  .teste {
     border-radius: 100px;
     background: var(--gray-alpha-200);
     padding: 4px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    width: 380px;
+    width: 200px;
     height: auto;
+  }
+  
+  .ctas {
+    gap: 16px; 
+    flex-direction: column; 
+    margin-top: 24px;
+  }
+
+  a.secondary,
+  a.primary {
+    min-width: 80%;
+    padding: 14px 20px;
+    font-size: 20px;
+    border-radius: 8px; 
+  }
+
+  .bodyMd {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .serviceExample {
+    padding: 16px;
+    gap: 24px;
+  }
+  
+  .iframeWrapper {
+    height: 250px; /* Reduz a altura do iframe no mobile */
+  }
+
+  .iframeMockup {
+    /* Mantém o scale, a redução é feita na altura do wrapper */
   }
 }

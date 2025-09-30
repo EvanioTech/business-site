@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Adicione esta seção para configurar o carregamento de imagens externas
+  images: {
+    domains: ['images.unsplash.com'], 
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
