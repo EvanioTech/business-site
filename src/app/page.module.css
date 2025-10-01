@@ -83,7 +83,10 @@
   margin-bottom: 24px;
   color: var(--color-primary);
   text-transform: uppercase;
+
+  text-shadow: 0 0 15px rgb(71, 209, 175); /* efeito borrado atrás */
 }
+
 
 
 .teste {
@@ -127,6 +130,7 @@
   border-right: 3px solid var(--color-primary);
   width: 0; /* começa escondido */
   animation: typing 2.2s steps(18, end) forwards, blink-caret 2.7s step-end infinite;
+  text-shadow: 0 0 15px rgb(56, 215, 226)
 }
 
 /* Keyframes precisam estar fora da classe */
