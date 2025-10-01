@@ -274,7 +274,7 @@ a.card p {
   a.card:focus,
   a.card:active {
     border-color: var(--color-primary);
-    transform: translateY(-5px); 
+    transform: translateY(-15px); 
     box-shadow: 0 4px 10px rgba(var(--gray-rgb), 0.1);
   }
 
