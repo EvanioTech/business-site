@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 // URL para o Google (Será o source do iframe)
 const WEB_SITE_LINK = "https://octadroid.netlify.app/";
@@ -36,7 +37,7 @@ export default function Home() {
 
         {/* NOVO BLOCO: Implementação do Iframe */}
         <div className={styles.iframeContainer}> 
-            <h3 className={styles.iframeTitle}>Exemplo de Qualidade: Octadroid</h3>
+            <h3 className={styles.iframeTitle}>Site : Octadroid</h3>
             <div className={styles.iframeWrapper}>
                 {/* O Google PROVAVELMENTE BLOQUEARÁ esta incorporação por segurança. */}
                 <iframe
@@ -69,26 +70,26 @@ export default function Home() {
         
 
         <div className={styles.grid}>
-          <a href="#sistemas-web-detalhe" className={styles.card}>
+          <Link href="/web" className={styles.card}>
             <h3>Sistemas Web &rarr;</h3>
             <p>Desenvolvimento de **sistemas web personalizados**, escaláveis e de alta performance para atender às necessidades do seu negócio.</p>
-            
-          </a>
 
-          <a href="#aplicativos-android-detalhe" className={styles.card}>
+          </Link>
+
+          <Link href="#aplicativos-android-detalhe" className={styles.card}>
             <h3>Aplicativos Android &rarr;</h3>
             <p>Criação de **aplicativos Android** intuitivos e funcionais, garantindo uma experiência de usuário excepcional.</p>
-          </a>
+          </Link>
 
-          <a href="#consultoria" className={styles.card}>
+          <Link href="#consultoria" className={styles.card}>
             <h3>Consultoria de TI &rarr;</h3>
             <p>Oferecemos consultoria especializada para **otimizar a infraestrutura** e estratégia de TI da sua empresa, gerando economia e eficiência.</p>
-          </a>
+          </Link>
 
-          <a href="#suporte-tecnico" className={styles.card}>
+          <Link href="#suporte-tecnico" className={styles.card}>
             <h3>Suporte Técnico &rarr;</h3>
             <p>Fornecemos suporte técnico **confiável e proativo** para garantir que seus sistemas estejam sempre funcionando perfeitamente, 24/7.</p>
-          </a>
+          </Link>
         </div>
         
       </main>
