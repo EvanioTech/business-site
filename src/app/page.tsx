@@ -76,7 +76,7 @@ export default function Home() {
 
           </Link>
 
-          <Link href="#aplicativos-android-detalhe" className={styles.card}>
+          <Link href="/android" className={styles.card}>
             <h3>Aplicativos Android &rarr;</h3>
             <p>Criação de **aplicativos Android** intuitivos e funcionais, garantindo uma experiência de usuário excepcional.</p>
           </Link>
