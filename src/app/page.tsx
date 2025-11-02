@@ -81,10 +81,7 @@ export default function Home() {
             <p>Criação de **aplicativos Android** intuitivos e funcionais, garantindo uma experiência de usuário excepcional.</p>
           </Link>
 
-          <Link href="/consultoria" className={styles.card}>
-            <h3>Consultoria de TI &rarr;</h3>
-            <p>Oferecemos consultoria especializada para **otimizar a infraestrutura** e estratégia de TI da sua empresa, gerando economia e eficiência.</p>
-          </Link>
+          
 
           <Link href="/suporte" className={styles.card}>
             <h3>Suporte Técnico &rarr;</h3>
