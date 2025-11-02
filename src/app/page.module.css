@@ -392,23 +392,47 @@ a.card p {
     gap: 24px;
   }
 
-  .iframeContainer {
+.iframeTitle {
+    /* Corrigindo o tamanho da fonte para algo legível no celular */
+    font-size: 12px; /* Ou 14px, dependendo do seu design. É legível. */
     
-    max-width: 100%;
-  }
+    /* 1. Força o texto a ficar em uma única linha, ignorando a largura do contêiner */
+    white-space: nowrap; 
+    
+    /* 2. Esconde qualquer texto que "vaze" para fora da largura de 100% */
+    overflow: hidden; 
+    
+    
+    
+    width: 100%; /* Garante que o contêiner ocupe 100% da largura */
+    
+    
+    /* Adicione um padding horizontal para que o texto não fique colado nas bordas */
+    padding: 4px 8px; /* Exemplo: 4px em cima/baixo, 8px na esquerda/direita */
 
-  .iframeTitle {
-    font-size: 6px;
-    width: 100%; /* Ocupa toda a largura no mobile */
-    background-color: brown;
-  }
+    /* Mantenha a animação, mas ela usará a nova largura definida abaixo */
+    animation: typing-mobile 3.2s steps(18, end) forwards, blink-caret 3.7s step-end infinite;
+}
+
+/* O resto do seu CSS */
+.iframeContainer {
+    max-width: 100%;
+}
   
-  .iframeWrapper {
-    height: 250px; /* Reduz a altura do iframe no mobile */
-  }
+.iframeWrapper {
+    height: 250px;
+}
+/* ... */
 
   .iframeMockup {
     
     /* Mantém o scale, a redução é feita na altura do wrapper */
+  }
+
+  /* NOVO KEYFRAMES: Criado APENAS para mobile */
+  @keyframes typing-mobile {
+    /* Define a largura final como 100% no mobile! */
+    from { width: 0 }
+    to { width: 50% } 
   }
 }
