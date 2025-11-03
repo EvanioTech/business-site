@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function AndroidPage (){
     return (
-        <main style={{ padding: 24, fontFamily: "Inter, system-ui, sans-serif" }}>
+        <main style={{ padding: 24, fontFamily: "Inter, system-ui, sans-serif" , backgroundColor: "#121212", }}>
             <section
                 style={{
                     maxWidth: 900,
@@ -18,11 +18,14 @@ export default function AndroidPage (){
                     display: "flex",
                     gap: 24,
                     alignItems: "center",
-                    flexWrap: "wrap",
+                    flexWrap: "wrap",  
+                    minHeight: "100vh",
+                    justifyContent: "center",
+                    
                 }}
             >
                 <div style={{ flex: "1 1 320px" }}>
-                    <h1 style={{ margin: "0 0 12px", fontSize: 32 }}>
+                    <h1 style={{ margin: "0 0 12px", fontSize: 32 , color: "#fff"}}>
                         Aplicativo Diário da Mamãe
                     </h1>
                     <p style={{ margin: "0 0 20px", color: "#fff", lineHeight: 1.5 }}>
@@ -30,7 +33,7 @@ export default function AndroidPage (){
                         oferecendo uma interface intuitiva e recursos úteis para pais ocupados.
                     </p>
 
-                    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" ,justifyContent: "center",}}>
                         <Link
                             href="https://play.google.com/store/apps/details?id=com.example.app"
                             target="_blank"
@@ -74,6 +77,7 @@ export default function AndroidPage (){
                     }}
                     aria-hidden
                 >
+                    
                     {/* Substitua src por uma captura de tela real em /public quando disponível */}
                     <Image
                         src="/diario.jpg"
@@ -82,7 +86,9 @@ export default function AndroidPage (){
                         height={540}
                         style={{ objectFit: "cover" }}
                         priority
+                        
                     />
+                
                 </div>
             </section>
 
@@ -122,7 +128,7 @@ export default function AndroidPage (){
                 }}
             >
                 <div style={{ flex: "1 1 320px" }}>
-                    <h1 style={{ margin: "0 0 12px", fontSize: 32 }}>
+                    <h1 style={{ margin: "0 0 12px", fontSize: 32, color: "#fff" }}>
                         Aplicativo Gerador de Sorteio
                     </h1>
                     <p style={{ margin: "0 0 20px", color: "#fff", lineHeight: 1.5 }}>
