@@ -28,7 +28,7 @@ const SistemaWebPage = () => {
         <div className="descriptionContainer">
         <h3 className="iframeTitle">Site : Octadroid</h3>
             <p className="descriptionText">
-            Nosso sistema web oferece uma plataforma robusta e intuitiva para gerenciar suas operações comerciais de forma eficiente. Com recursos avançados de análise de dados, integração com outras ferramentas e uma interface amigável, nosso sistema web é projetado para atender às necessidades específicas do seu negócio, ajudando você a alcançar seus objetivos com facilidade.
+            Site feito para uma empresa de serviços de tecnologia, oferecendo soluções personalizadas para atender às necessidades dos clientes. Com uma interface amigável e recursos avançados, o site permite que os usuários explorem os serviços oferecidos, entrem em contato com a equipe de suporte e acessem informações relevantes sobre a empresa.
             </p>
             <button className="buttonVisit" onClick={() => window.open(WEB_SITE_LINK, "_blank")}>visitar Site</button>
             <button className="buttonRequest">Solicitar Sistema Web</button>
@@ -49,9 +49,9 @@ const SistemaWebPage = () => {
             
         </div>
         <div className="descriptionContainer">
-        <h3 className="iframeTitle">Site : Octadroid</h3>
+        <h3 className="iframeTitle">Site : Matias Developer</h3>
             <p className="descriptionText">
-            Nosso sistema web oferece uma plataforma robusta e intuitiva para gerenciar suas operações comerciais de forma eficiente. Com recursos avançados de análise de dados, integração com outras ferramentas e uma interface amigável, nosso sistema web é projetado para atender às necessidades específicas do seu negócio, ajudando você a alcançar seus objetivos com facilidade.
+            Site pessoal de um desenvolvedor, apresentando seu portfólio, habilidades e projetos. Com um design moderno e responsivo, o site permite que os visitantes conheçam o trabalho do desenvolvedor, entrem em contato para oportunidades de colaboração e explorem seus conhecimentos técnicos.
             </p>
             <button className="buttonVisit" onClick={() => window.open(WEB_SITE_LINK2, "_blank")}>visitar Site</button>
             <button className="buttonRequest">Solicitar Sistema Web</button>
