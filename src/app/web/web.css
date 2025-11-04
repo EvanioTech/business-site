@@ -46,6 +46,36 @@
   line-height: 1.5;
 }
 
+.buttonVisit {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.buttonVisit:hover {
+  background-color: #218838;
+}
+
+.buttonRequest {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.buttonRequest:hover {
+  background-color: #e0a800;
+}
+
 .title {
   font-size: 32px;
   font-weight: bold;
