@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/header";
 
 export const metadata = {
     title: "Aplicativo Android — Business Site",
@@ -11,6 +12,7 @@ export const metadata = {
 export default function AndroidPage (){
     return (
         <main style={{ padding: 24, fontFamily: "Inter, system-ui, sans-serif" , backgroundColor: "#121212", }}>
+            <Header />
             <section
                 style={{
                     maxWidth: 900,

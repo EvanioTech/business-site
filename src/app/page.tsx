@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Header from "@/components/header";
 
 // URL para o Google (Será o source do iframe)
 const WEB_SITE_LINK = "https://octadroid.netlify.app/";
@@ -10,7 +11,10 @@ const ANDROID_APP_SCREENSHOT_SRC = "https://images.unsplash.com/photo-1607252650
 
 export default function Home() {
   return (
+    <div style={{ backgroundColor: "#121212", display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Header />
     <div className={styles.page}>
+      
       <main className={styles.main}>
         <div className={styles.header}>
           <div>
@@ -91,6 +95,7 @@ export default function Home() {
         
       </main>
       
+    </div>
     </div>
   );
 }

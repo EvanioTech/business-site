@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import "./suporte.css";
+import Header from "@/components/header";
 
 
 
@@ -18,7 +19,10 @@ export default function SuportePage() {
     
 
     return (
+        <div style={{ backgroundColor: "#121212", display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+              <Header />
         <main className="container">
+            
             <h1 className="title">Suporte de TI</h1>
             
 
@@ -53,6 +57,7 @@ export default function SuportePage() {
 
             
         </main>
+        </div>
     );
 }
 

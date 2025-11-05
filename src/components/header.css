@@ -1,0 +1,63 @@
+
+
+
+
+header {
+  justify-content: center;
+  
+  padding: 20px;
+  
+  
+
+  
+
+  
+}nav ul {
+   display: flex;
+  justify-content: center; /* ou flex-start, se quiser alinhar à esquerda */
+  align-items: center;
+  gap: 80px; /* controla o espaço entre os links */
+  margin-top: 10px;
+  padding: 0;
+}nav ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  border-width: 2px;
+    border-style: solid;
+  border-color: #eee;
+  border-radius: 8px;
+}nav ul li a:hover {
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}nav ul li a:active {
+  color: rgb(25, 218, 208);
+}
+
+
+
+
+
+.text {
+  color: rgb(244, 244, 245);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.text:hover {
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    color: rgb(25, 218, 208);
+    text-decoration: none;
+    font-size: 25px;
+
+
+}
+.text:active {
+  color: rgb(25, 218, 208);
+}
+
+li {
+  list-style: none;
+}
