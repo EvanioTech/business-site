@@ -1,0 +1,96 @@
+/* src/components/header.module.css */
+
+/* --- Estilos Globais (Desktop/Padrão) --- */
+
+.headerContainer {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul {
+   display: flex;
+  justify-content: center; /* Centraliza horizontalmente os <li> */
+  align-items: center;
+  gap: 80px; /* Grande espaçamento para desktop */
+  margin-top: 10px;
+  padding: 0;
+}
+
+.listItem {
+  list-style: none; /* Remove os pontos da lista */
+}
+
+
+.text {
+  /* Estilos do Link (Anchor) */
+  color: rgb(244, 244, 245); 
+  text-decoration: none;
+  padding: 10px; /* Padding visível para desktop */
+  
+  /* Borda visível para desktop */
+  border-width: 2px;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: 8px;
+  
+  font-size: 16px;
+  font-weight: 500;
+  /* Garante que o texto não quebre se o contêiner for estreito */
+  white-space: nowrap; 
+}
+
+/* Estilos de interação do link */
+.text:hover {
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    color: rgb(25, 218, 208);
+    text-decoration: none;
+    /* CUIDADO: Alterar o font-size no hover faz os outros elementos 'pularem' */
+    font-size: 25px; 
+}
+
+.text:active {
+  color: rgb(25, 218, 208);
+}
+
+
+/* --- Media Query (Mobile) --- */
+
+@media screen and (max-width: 600px) {
+
+  .headerContainer {
+    width: 100%; /* Ocupa toda a largura da tela */
+    /* Empilha o conteúdo (nav) se houver outros elementos no header */
+    flex-direction: column; 
+    gap: 16px;
+  }
+  
+  .ul { 
+    /* CRUCIAL: Empilha os links verticalmente para caber na tela */
+    flex-direction: column;
+    text-align: center;
+    width: 100%; /* Garante que a lista use toda a largura disponível */
+    gap: 10px; /* Reduz o espaçamento entre os links */
+    /* Garantir que os links fiquem centralizados se a lista for menor */
+    justify-content: center; 
+  }
+
+  /* O .listItem não precisa de redefinição se o list-style: none; já está lá */
+
+  .text {
+    /* Reduz o padding e a fonte para economizar espaço */
+    padding: 8px; 
+    font-size: 14px;
+    
+    /* Remove ou reduz drasticamente as bordas para caber na tela */
+    
+    border-style: none;
+    /* Faz o link ocupar toda a largura disponível no modo coluna */
+    width: 100%; 
+    /* Remove o white-space: nowrap para permitir quebra se a palavra for muito longa, embora 'column' minimize isso. */
+    white-space: normal; 
+  }
+}
