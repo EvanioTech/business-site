@@ -26,7 +26,7 @@ export default function AndroidPage (){
 
                     <div className={styles.buttonContainer}>
                         <Link
-                            href="https://play.google.com/store/apps/details?id=com.example.app"
+                            href="https://play.google.com/store/apps/details?id=com.matiasdevts.diariodamamae"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.buttonLink}
@@ -90,7 +90,7 @@ export default function AndroidPage (){
 
                     <div className={styles.buttonContainer}>
                         <Link
-                            href="https://play.google.com/store/apps/details?id=com.example.app"
+                            href="https://play.google.com/store/apps/details?id=com.matiasdevts.Sorteio"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.buttonLink}
@@ -154,7 +154,7 @@ export default function AndroidPage (){
 
                     <div className={styles.buttonContainer}>
                         <Link
-                            href="https://play.google.com/store/apps/details?id=com.example.app"
+                            href="https://play.google.com/store/apps/details?id=com.matiasdevts.testerfull"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.buttonLink}
