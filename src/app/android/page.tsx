@@ -310,7 +310,7 @@ export default function AndroidPage (){
                 >
                     {/* Substitua src por uma captura de tela real em /public quando disponível */}
                     <Image
-                        src="/Sorteio.png"
+                        src="/test.jpg"
                         alt="Captura de tela do aplicativo"
                         width={270}
                         height={540}

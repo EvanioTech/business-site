@@ -109,3 +109,20 @@
 .nav:hover {
   background-color: #0056b3;
 }
+
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .iframeWrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .descriptionContainer {
+    max-width: 100%;
+  }
+}    
+
