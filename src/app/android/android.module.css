@@ -120,14 +120,12 @@
 @media (max-width: 768px) {
   .section {
     display: flex;
-    width: 90%;
+    width: 100%;
     flex-direction: column;
   }
 
   .imageContainer, .textContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: none;
     width: 100%;
   }
 
