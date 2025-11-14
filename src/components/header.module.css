@@ -68,36 +68,43 @@
 
 @media screen and (max-width: 600px) {
 
+  /* ... Estilos de .headerContainer (sem alteração) ... */
   .headerContainer {
-    width: 100%; /* Ocupa toda a largura da tela */
-    /* Empilha o conteúdo (nav) se houver outros elementos no header */
+    width: 100%; 
     flex-direction: column; 
     gap: 16px;
   }
   
   .ul { 
-    /* CRUCIAL: Empilha os links verticalmente para caber na tela */
-    flex-direction: column;
+    /* 1. MUDAR DE FLEX PARA GRID PARA ATIVAR O SISTEMA DE COLUNAS */
+    display: grid; 
+    /* 2. DEFINIR AS 2 COLUNAS IGUAIS (minmax(0, 1fr) é melhor que apenas 1fr) */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Centraliza os itens dentro das células do grid */
+    place-items: center; 
+    
+    /* REMOVIDO: flex-direction: column; */
     text-align: center;
-    width: 100%; /* Garante que a lista use toda a largura disponível */
-    gap: 10px; /* Reduz o espaçamento entre os links */
-    /* Garantir que os links fiquem centralizados se a lista for menor */
-    justify-content: center; 
+    width: 100%; 
+    gap: 10px; 
+    justify-content: center; /* Redundante com place-items, mas não custa manter. */
+    
   }
 
-  /* O .listItem não precisa de redefinição se o list-style: none; já está lá */
+  /* ⚠️ REMOVER o grid-template-columns do .listItem */
+  .listItem {
+    margin-top: 10px;
+    /* REMOVER: grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  }
 
   .text {
-    /* Reduz o padding e a fonte para economizar espaço */
+    /* MUDANÇA IMPORTANTE: Ocupar a largura total da célula do grid */
+    width: 100%; 
+    /* Garante que o texto fique centralizado no link */
+    text-align: center; 
     padding: 8px; 
     font-size: 14px;
-    
-    /* Remove ou reduz drasticamente as bordas para caber na tela */
-    
     border-style: none;
-    /* Faz o link ocupar toda a largura disponível no modo coluna */
-    width: 100%; 
-    /* Remove o white-space: nowrap para permitir quebra se a palavra for muito longa, embora 'column' minimize isso. */
     white-space: normal; 
   }
 }
