@@ -99,7 +99,7 @@
   box-shadow: #0c6cd1 0px 4px 14px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .section {
     display: flex;
     width: 100%;
