@@ -1,0 +1,9 @@
+.contact {
+  margin-top: 40px;
+  text-align: center;
+  box-shadow: #0c6cd1 0px 4px 14px ;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(24, 202, 233, 0.1);
+  font-size: 30px;
+}

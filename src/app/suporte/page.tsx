@@ -15,7 +15,12 @@ type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export default function SuportePage() {
     
-
+    const wppMessage = () => {
+        const phoneNumber = "5585991785953"; // Substitua pelo número de telefone desejado
+        const message = "Olá, gostaria de solicitar suporte de TI."; // Mensagem padrão
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+    }
     
 
     return (
@@ -36,7 +41,7 @@ export default function SuportePage() {
                     <p className="lead">* Outros problemas?</p>
                     <p className="lead">Solicite a formatação do seu dispositivo com nossa equipe de suporte.</p>
                     <div className="actions">
-                        <button className="button">Solicitar Formatação</button>
+                        <button className="button" onClick={wppMessage}>Solicitar Formatação</button>
                     </div>
                 </div>
             </section>
@@ -50,7 +55,7 @@ export default function SuportePage() {
                     <p className="lead">* Outros problemas?</p>
                     <p className="lead">Solicite o reparo do seu dispositivo com nossa equipe de suporte.</p>
                     <div className="actions">
-                        <button className="button">Solicitar Reparo</button>
+                        <button className="button" onClick={wppMessage}>Solicitar Reparo</button>
                     </div>
                 </div>
             </section>

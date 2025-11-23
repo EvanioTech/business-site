@@ -1,8 +1,10 @@
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/header";
 import styles from './android.module.css';
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
     title: "Aplicativo Android — Business Site",
@@ -11,6 +13,8 @@ export const metadata = {
 };
 
 export default function AndroidPage (){
+
+    
     return (
         <main className={styles.main}>
             <Header />
@@ -203,6 +207,7 @@ export default function AndroidPage (){
                     <a href="mailto:evanioshark@gmail.com">evanioshark@gmail.com</a>.
                 </p>
             </section>
+            <WhatsAppButton />
         </main>
     );
 }
