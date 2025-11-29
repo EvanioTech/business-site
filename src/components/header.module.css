@@ -35,8 +35,8 @@
   /* Estilos do Link (Anchor) */
   color: rgb(244, 244, 245);
   text-decoration: none;
-  padding: 10px;
-  /* Padding visível para desktop */
+  padding: 10px 20px;
+  /* Increased horizontal padding */
 
   /* Borda visível para desktop */
   border-width: 2px;
@@ -56,6 +56,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  /* Smooth transitions for all animated properties */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .icon {
@@ -65,15 +68,25 @@
 
 /* Estilos de interação do link */
 .text:hover {
-  text-transform: capitalize;
-  transition: all 0.3s ease-in-out;
+  /* REMOVED: text-transform: capitalize; (can cause layout shift if text length changes) */
+  /* REMOVED: font-size: 25px; (major layout shift) */
+
   color: rgb(25, 218, 208);
   text-decoration: none;
-  /* CUIDADO: Alterar o font-size no hover faz os outros elementos 'pularem' */
-  font-size: 25px;
+
+  /* Scale effect without layout shift */
+  transform: scale(1.05);
+
+  /* Enhanced glow effect */
+  box-shadow: 0 0 15px rgba(25, 218, 208, 0.6), inset 0 0 10px rgba(25, 218, 208, 0.2);
+  border-color: rgba(25, 218, 208, 0.5);
+
+  cursor: pointer;
 }
 
 .text:active {
+  transform: scale(0.95);
+  /* Subtle click effect */
   color: rgb(25, 218, 208);
 }
 
