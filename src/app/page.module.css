@@ -443,29 +443,41 @@ a.card p {
   /* O resto do seu CSS */
   .iframeContainer {
     max-width: 100%;
+    padding: 16px;
+    /* Reduce padding on mobile */
   }
 
   .iframeWrapper {
-    height: 250px;
+    width: 100%;
+    height: auto;
+    /* Remove fixed height */
+    aspect-ratio: 3/4;
+    /* Maintain standard screen ratio */
+    border-width: 4px;
+    /* Thinner border for mobile */
+    border-radius: 4px;
   }
-
-  /* ... */
 
   .iframeMockup {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    transform: none;
+    /* No scaling, render actual mobile view */
+    transform-origin: 0 0;
+  }
+}
 
-    /* Mantém o scale, a redução é feita na altura do wrapper */
+/* NOVO KEYFRAMES: Criado APENAS para mobile */
+@keyframes typing-mobile {
+
+  /* Define a largura final como 100% no mobile! */
+  from {
+    width: 0
   }
 
-  /* NOVO KEYFRAMES: Criado APENAS para mobile */
-  @keyframes typing-mobile {
-
-    /* Define a largura final como 100% no mobile! */
-    from {
-      width: 0
-    }
-
-    to {
-      width: 50%
-    }
+  to {
+    width: 50%
   }
 }
