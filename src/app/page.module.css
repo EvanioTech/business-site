@@ -2,20 +2,21 @@
   /* Cores base */
   --gray-rgb: 0, 0, 0;
   --gray-alpha-900: rgba(var(--gray-rgb), 0.9);
-  --gray-alpha-700: rgba(var(--gray-rgb), 0.5); 
+  --gray-alpha-700: rgba(var(--gray-rgb), 0.5);
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
   /* Cores Primárias */
-  --color-primary: #007bff; /* Azul vibrante para botões e links */
+  --color-primary: #007bff;
+  /* Azul vibrante para botões e links */
   --color-primary-text: #ffffff;
   --color-primary-hover: #0056b3;
 
   /* Cores Secundárias (para contraste ou botões secundários) */
-  --color-secondary: #f0f0f0; 
+  --color-secondary: #f0f0f0;
   --color-secondary-text: #333;
   --color-secondary-hover: #e0e0e0;
-  
+
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -24,7 +25,8 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
-  color: var(--gray-alpha-900); /* Define cor de texto principal */
+  color: var(--gray-alpha-900);
+  /* Define cor de texto principal */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,8 +38,8 @@
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
     /* Cores Primárias Dark Mode */
-    --color-primary: #4da6ff; 
-    --color-primary-text: #1a1a1a; 
+    --color-primary: #4da6ff;
+    --color-primary-text: #1a1a1a;
     --color-primary-hover: #007bff;
 
     /* Cores Secundárias Dark Mode */
@@ -52,14 +54,14 @@
 
 .main {
   display: flex;
-  gap: 64px; 
+  gap: 64px;
   grid-row-start: 2;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 100%; 
-  max-width: 1200px; 
+  width: 100%;
+  max-width: 1200px;
 }
 
 .header {
@@ -84,7 +86,8 @@
   color: var(--color-primary);
   text-transform: uppercase;
 
-  text-shadow: 0 0 15px rgb(71, 209, 175); /* efeito borrado atrás */
+  text-shadow: 0 0 15px rgb(71, 209, 175);
+  /* efeito borrado atrás */
 }
 
 
@@ -119,52 +122,70 @@
   font-weight: 600;
   margin: 0;
   color: var(--color-primary);
-  text-transform: uppercase;  
+  text-transform: uppercase;
   margin-bottom: 12px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
+
   /* Efeito de digitação */
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid var(--color-primary);
-  width: 0; /* começa escondido */
+  width: 0;
+  /* começa escondido */
   animation: typing 2.2s steps(18, end) forwards, blink-caret 2.7s step-end infinite;
   text-shadow: 0 0 15px rgb(56, 215, 226)
 }
 
 /* Keyframes precisam estar fora da classe */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 30% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 30%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--color-primary); }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--color-primary);
+  }
 }
 
 
 .iframeWrapper {
-    width: 90%;
-    height: 350px; /* Altura fixa para o mockup */
-    background: #fff; /* Fundo branco, simula tela */
-    border: 8px solid var(--gray-alpha-900); /* Borda grossa simula moldura */
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 0 0 1px var(--gray-alpha-700);
+  width: 90%;
+  height: 350px;
+  /* Altura fixa para o mockup */
+  background: #fff;
+  /* Fundo branco, simula tela */
+  border: 8px solid var(--gray-alpha-900);
+  /* Borda grossa simula moldura */
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--gray-alpha-700);
 }
 
 .iframeMockup {
-    width: 100%;
-    height: 100%;
-    display: block;
-    transform: scale(0.6); /* Reduz o conteúdo interno para simular uma miniatura */
-    transform-origin: 0 0; /* Começa a redução do canto superior esquerdo */
-    
-    /* Calculo de altura após o scale */
-    height: calc(100% / 0.6); 
-    width: calc(100% / 0.6);
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(0.6);
+  /* Reduz o conteúdo interno para simular uma miniatura */
+  transform-origin: 0 0;
+  /* Começa a redução do canto superior esquerdo */
+
+  /* Calculo de altura após o scale */
+  height: calc(100% / 0.6);
+  width: calc(100% / 0.6);
 }
 
 
@@ -193,9 +214,9 @@
 }
 
 .serviceExample img {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(var(--gray-rgb), 0.2);
-    object-fit: contain; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(var(--gray-rgb), 0.2);
+  object-fit: contain;
 }
 
 
@@ -210,7 +231,8 @@
   margin-top: 36px;
 }
 
-.ctas2 { /* Container para o título Nossos Serviços */
+.ctas2 {
+  /* Container para o título Nossos Serviços */
   margin-top: 10px;
 }
 
@@ -237,14 +259,14 @@ a.secondary {
 }
 
 a.primary {
-    background-color: var(--color-primary);
-    color: var(--color-primary-text);
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 a.secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-secondary-text);
-    border: 1px solid var(--gray-alpha-200);
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-text);
+  border: 1px solid var(--gray-alpha-200);
 }
 
 
@@ -301,7 +323,7 @@ a.card p {
   a.card:focus,
   a.card:active {
     border-color: var(--color-primary);
-    transform: translateY(-15px); 
+    transform: translateY(-15px);
     box-shadow: 0 4px 10px rgba(var(--gray-rgb), 0.1);
   }
 
@@ -317,17 +339,18 @@ a.card p {
 
 @media (max-width: 900px) {
   .serviceExample {
-    flex-direction: column !important; 
+    flex-direction: column !important;
     text-align: center;
   }
+
   .serviceExample img {
-    max-width: 80%; 
+    max-width: 80%;
     height: auto;
   }
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .page {
     padding: 32px;
     padding-bottom: 80px;
@@ -349,9 +372,9 @@ a.card p {
     font-size: 24px;
     margin-bottom: 16px;
   }
-  
+
   .headingLg2 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .teste {
@@ -362,10 +385,10 @@ a.card p {
     width: 200px;
     height: auto;
   }
-  
+
   .ctas {
-    gap: 16px; 
-    flex-direction: column; 
+    gap: 16px;
+    flex-direction: column;
     margin-top: 24px;
   }
 
@@ -374,7 +397,7 @@ a.card p {
     min-width: 80%;
     padding: 14px 20px;
     font-size: 20px;
-    border-radius: 8px; 
+    border-radius: 8px;
   }
 
   .bodyMd {
@@ -386,53 +409,63 @@ a.card p {
     grid-template-columns: 1fr;
     width: 100%;
   }
-  
+
   .serviceExample {
     padding: 16px;
     gap: 24px;
   }
 
-.iframeTitle {
+  .iframeTitle {
     /* Corrigindo o tamanho da fonte para algo legível no celular */
-    font-size: 12px; /* Ou 14px, dependendo do seu design. É legível. */
-    
+    font-size: 12px;
+    /* Ou 14px, dependendo do seu design. É legível. */
+
     /* 1. Força o texto a ficar em uma única linha, ignorando a largura do contêiner */
-    white-space: nowrap; 
-    
+    white-space: nowrap;
+
     /* 2. Esconde qualquer texto que "vaze" para fora da largura de 100% */
-    overflow: hidden; 
-    
-    
-    
-    width: 100%; /* Garante que o contêiner ocupe 100% da largura */
-    
-    
+    overflow: hidden;
+
+
+
+    width: 100%;
+    /* Garante que o contêiner ocupe 100% da largura */
+
+
     /* Adicione um padding horizontal para que o texto não fique colado nas bordas */
-    padding: 4px 8px; /* Exemplo: 4px em cima/baixo, 8px na esquerda/direita */
+    padding: 4px 8px;
+    /* Exemplo: 4px em cima/baixo, 8px na esquerda/direita */
 
     /* Mantenha a animação, mas ela usará a nova largura definida abaixo */
     animation: typing-mobile 3.2s steps(18, end) forwards, blink-caret 3.7s step-end infinite;
-}
+  }
 
-/* O resto do seu CSS */
-.iframeContainer {
+  /* O resto do seu CSS */
+  .iframeContainer {
     max-width: 100%;
-}
-  
-.iframeWrapper {
+  }
+
+  .iframeWrapper {
     height: 250px;
-}
-/* ... */
+  }
+
+  /* ... */
 
   .iframeMockup {
-    
+
     /* Mantém o scale, a redução é feita na altura do wrapper */
   }
 
   /* NOVO KEYFRAMES: Criado APENAS para mobile */
   @keyframes typing-mobile {
+
     /* Define a largura final como 100% no mobile! */
-    from { width: 0 }
-    to { width: 50% } 
+    from {
+      width: 0
+    }
+
+    to {
+      width: 50%
+    }
   }
 }
