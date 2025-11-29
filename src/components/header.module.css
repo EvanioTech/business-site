@@ -91,9 +91,9 @@
 }
 
 
-/* --- Media Query (Mobile) --- */
+/* --- Media Query (Mobile/Tablet) --- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
 
   .headerContainer {
     width: 100%;
