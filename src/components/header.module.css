@@ -8,55 +8,69 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  
+  background-color: transparent;
+  /* Ensure transparent background on desktop if needed, or keep default */
 }
 
 .ul {
-   display: flex;
-  justify-content: center; /* Centraliza horizontalmente os <li> */
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente os <li> */
   align-items: center;
-  gap: 80px; /* Grande espaçamento para desktop */
+  gap: 80px;
+  /* Grande espaçamento para desktop */
   margin-top: 10px;
   padding: 0;
-  
+
 }
 
 .listItem {
-  list-style: none; /* Remove os pontos da lista */
-  
+  list-style: none;
+  /* Remove os pontos da lista */
+
 }
 
 
 .text {
   /* Estilos do Link (Anchor) */
-  color: rgb(244, 244, 245); 
+  color: rgb(244, 244, 245);
   text-decoration: none;
-  padding: 10px; /* Padding visível para desktop */
-  
+  padding: 10px;
+  /* Padding visível para desktop */
+
   /* Borda visível para desktop */
   border-width: 2px;
   border-style: solid;
-  
-  
+
+
   background-color: #1e1e1e;
   border-radius: 10px;
   border: 2px solid rgba(24, 202, 233, 0.1);
   box-shadow: #0c6cd1 0px 4px 14px;
-  
+
   font-size: 16px;
   font-weight: 500;
   /* Garante que o texto não quebre se o contêiner for estreito */
-  white-space: nowrap; 
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  display: none;
+  /* Hide icons on desktop by default, or remove this line to show them */
 }
 
 /* Estilos de interação do link */
 .text:hover {
-    text-transform: capitalize;
-    transition: all 0.3s ease-in-out;
-    color: rgb(25, 218, 208);
-    text-decoration: none;
-    /* CUIDADO: Alterar o font-size no hover faz os outros elementos 'pularem' */
-    font-size: 25px; 
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  color: rgb(25, 218, 208);
+  text-decoration: none;
+  /* CUIDADO: Alterar o font-size no hover faz os outros elementos 'pularem' */
+  font-size: 25px;
 }
 
 .text:active {
@@ -68,43 +82,92 @@
 
 @media screen and (max-width: 600px) {
 
-  /* ... Estilos de .headerContainer (sem alteração) ... */
   .headerContainer {
-    width: 100%; 
-    flex-direction: column; 
-    gap: 16px;
-  }
-  
-  .ul { 
-    /* 1. MUDAR DE FLEX PARA GRID PARA ATIVAR O SISTEMA DE COLUNAS */
-    display: grid; 
-    /* 2. DEFINIR AS 2 COLUNAS IGUAIS (minmax(0, 1fr) é melhor que apenas 1fr) */
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* Centraliza os itens dentro das células do grid */
-    place-items: center; 
-    
-    /* REMOVIDO: flex-direction: column; */
-    text-align: center;
-    width: 100%; 
-    gap: 10px; 
-    justify-content: center; /* Redundante com place-items, mas não custa manter. */
-    
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #1e1e1e;
+    /* Background for the tab bar */
+    padding: 0;
+    /* Remove padding to maximize space */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    height: 60px;
+    /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
   }
 
-  /* ⚠️ REMOVER o grid-template-columns do .listItem */
+  .nav {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ul {
+    display: flex;
+    flex-direction: row;
+    /* Explicitly set row */
+    justify-content: space-between;
+    /* Distribute items */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+
   .listItem {
-    margin-top: 10px;
-    /* REMOVER: grid-template-columns: repeat(2, minmax(0, 1fr)); */
+    margin: 0;
+    flex: 1;
+    /* Each item takes equal width */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .text {
-    /* MUDANÇA IMPORTANTE: Ocupar a largura total da célula do grid */
-    width: 100%; 
-    /* Garante que o texto fique centralizado no link */
-    text-align: center; 
-    padding: 8px; 
-    font-size: 14px;
-    border-style: none;
-    white-space: normal; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    white-space: normal;
+    gap: 4px;
+    color: #a1a1aa;
+    /* Muted color for inactive state */
+    border-radius: 0;
+    /* Remove border radius for full tap area */
+  }
+
+  .text:hover {
+    font-size: 10px;
+    /* Prevent size jump on hover in mobile */
+    color: rgb(25, 218, 208);
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Subtle hover background */
+  }
+
+  .icon {
+    display: block;
+    /* Show icons on mobile */
+    margin-bottom: 2px;
+  }
+
+  .linkText {
+    display: block;
+    font-size: 10px;
+    line-height: 1;
   }
 }
