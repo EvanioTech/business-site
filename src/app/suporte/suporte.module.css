@@ -1,26 +1,27 @@
-
 .main {
   padding: 24px;
+  padding-top: 100px;
   font-family: "Inter, system-ui, sans-serif";
   background-color: #121212;
   align-items: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 .section {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   padding: 20px;
   max-width: 900px;
   margin-top: 40px;
   text-align: center;
-    justify-content: center;
-    gap: 20px;
-    border: 2px solid rgba(24, 202, 233, 0.1);
-    border-radius: 10px;
-    background-color: #1e1e1e;
-    box-shadow: #0c6cd1 0px 4px 14px;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid rgba(24, 202, 233, 0.1);
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  box-shadow: #0c6cd1 0px 4px 14px;
 }
 
 .title {
@@ -43,8 +44,8 @@
 }
 
 .buttonLink:hover {
-    background-color: #0c7c43;
-    transition: background-color 0.3s ease-in-out;
+  background-color: #0c7c43;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .description {
@@ -62,7 +63,7 @@
 }
 
 .featureList li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .textContainer {
@@ -79,9 +80,9 @@
 }
 
 .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .infoText {
@@ -94,7 +95,7 @@
   margin-top: 20px;
   margin-bottom: 40px;
   padding: 24px;
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
   border-radius: 10px;
   border: 2px solid rgba(24, 202, 233, 0.1);
   box-shadow: #0c6cd1 0px 4px 14px;
@@ -107,7 +108,8 @@
     flex-direction: column;
   }
 
-  .imageContainer, .textContainer {
+  .imageContainer,
+  .textContainer {
     flex: none;
     width: 100%;
   }
@@ -125,7 +127,8 @@
     flex-direction: column;
   }
 
-  .imageContainer, .textContainer {
+  .imageContainer,
+  .textContainer {
     flex: none;
     width: 100%;
   }
