@@ -89,8 +89,8 @@ const SistemaWebPage = () => {
         </p>
       </section>
 
-      <Link href="/" className={styles.nav}>Voltar à página principal</Link>
-      <WhatsAppButton />
+      
+      <WhatsAppButton title="Solicitar Sistema" />
     </main>
   );
 };

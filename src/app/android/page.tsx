@@ -207,7 +207,7 @@ export default function AndroidPage (){
                     <a href="mailto:evanioshark@gmail.com">evanioshark@gmail.com</a>.
                 </p>
             </section>
-            <WhatsAppButton />
+            <WhatsAppButton title="Solicitar App" />
         </main>
     );
 }

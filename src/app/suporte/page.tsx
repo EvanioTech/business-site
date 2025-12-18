@@ -103,7 +103,7 @@ export default function SuportePage() {
                 </p>
             </section>
 
-            <WhatsAppButton />
+            <WhatsAppButton title="Solicitar Suporte" />
         </main>
     );
 }

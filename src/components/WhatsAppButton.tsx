@@ -3,9 +3,14 @@
 import React from "react";
 import styles from './WhatsAppButton.module.css';
 
+type WhatsAppButtonProps = {
+  title: string;
+};
 
 
-export default function WhatsAppButton() {
+export default function WhatsAppButton({ title }: WhatsAppButtonProps) {
+
+  
   const wppMessage = () => {
     const phoneNumber = "5585991785953";
     const message = "Olá, gostaria de solicitar um aplicativo Android.";
@@ -15,7 +20,7 @@ export default function WhatsAppButton() {
 
   return (
     <button className= {styles.contact} onClick={wppMessage}>
-      Solicite já seu app!
+      {title}
     </button>
   );
 }
