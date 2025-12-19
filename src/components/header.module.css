@@ -104,6 +104,7 @@
     width: 100%;
     position: fixed;
     bottom: 0;
+    top: auto;
     left: 0;
     right: 0;
     z-index: 1000;
